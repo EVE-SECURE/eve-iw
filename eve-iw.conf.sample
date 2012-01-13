@@ -1,0 +1,7 @@
+[main]
+minimize_on_close = True
+
+[123456]
+charIDs = 399992859,399992860,399992861
+charNames = Character Name1,Character Name2,Character Name3
+vCode = ABf0luepPMmUKavRO8f12301234567890kSyYxQpgiwfBd5ebpX5IgjiQfOdNBem

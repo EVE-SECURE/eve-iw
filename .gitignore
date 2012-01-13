@@ -1,0 +1,9 @@
+*.pyc
+cache/*
+mainwindow.py
+preferences.py
+eve-iw.conf
+.project
+.pydevproject
+.settings
+.settings/*
