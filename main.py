@@ -15,6 +15,8 @@
 import sys
 from PySide.QtCore import *
 from PySide.QtGui import *
+from config import Config
+from eapi import Eapi
 from mainwindow import Ui_MainWindow
 from preferences import Ui_preferencesDialog
 
@@ -35,7 +37,7 @@ class PreferencesDialog(QDialog):
         QObject.connect(self.ui.fetchButton,SIGNAL('clicked()'),self.onFetch)
         QObject.connect(self.ui.addButton,SIGNAL('clicked()'),self.onAdd)
     def loadConfig(self):
-        pass
+        parser = Config()
     def onCancel(self):
         self.close()
     def onApply(self):
@@ -53,7 +55,6 @@ class MainWindow(QMainWindow):
         self.ui =  Ui_MainWindow()
         self.ui.setupUi(self)
         
-        #startup window configuration
         self.ui.copyesLabel.hide()
         self.ui.copyesDisplay.hide()
         self.ui.runsLabel.hide()
@@ -77,7 +78,6 @@ class MainWindow(QMainWindow):
         dlg.show()
     def onQuit(self):
         self.close()
-
 if __name__ == "__main__":
     app = QApplication(sys.argv)
     form = MainWindow()
