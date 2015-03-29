@@ -1,0 +1,1 @@
+Small tool for watching my industrial jobs in eve-online.
